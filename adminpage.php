@@ -2,12 +2,11 @@
 
 session_start();
 
-if(!isset($_SESSION['admin']))
+if(!isset($_SESSION['admin']))//If admin is not set they cannot redirect to the adminpage
 {
-	header("location:index.php");
+	header("location:index.php");//Returm to index
 }
-//if the user is in the profile page he cannot direct to the admin page//
-if(isset($_SESSION['uid']))
+if(isset($_SESSION['uid']))//if the user is in the profile page he cannot direct to the admin page//
 {
 	header("location:profile.php");
 }
@@ -16,13 +15,12 @@ if(isset($_SESSION['uid']))
 <html>
 <head>
 	<title>Admin</title>
+		<meta charset="UTF-8"/>//Specifies the character encoding in HTML
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="js/jquery2.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
 		
-		
-
 <style type="text/css">
 
 .icon-size{
