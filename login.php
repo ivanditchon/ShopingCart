@@ -6,8 +6,8 @@ session_start();
 if(isset($_POST['submit']))
 {
 
-    $emailadd = $_POST['email'];
-    $password = $_POST['password'];
+    $emailadd = mysqli_real_escape_string($con,$_POST['email']);
+    $password = mysqli_real_escape_string($con,$_POST['password']);
 
     $_SESSION['email'] = $emailadd;
     $_SESSION['password'] = $password;
