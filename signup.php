@@ -12,19 +12,19 @@
 		$mobilenum = $_POST['mobilenum'];
 		$address   = $_POST['address'];
 		$address2   = $_POST['address2'];
-		$name_validation = "/^[A-Z][A-zA-Z]+$/";
-		$mobile_num_validation = "/^[0-9]+$/";
+		$name_validation = "/^[A-Z][A-zA-Z]+$/"; //Name validation
+		$mobile_num_validation = "/^[0-9]+$/"; //Mobile number validation
 		$confirmpass = $_POST['confirm'];
 		
 
-	$check_email = "SELECT * FROM account WHERE email = '$email'";
+	$check_email = "SELECT * FROM account WHERE email = '$email'"; //Checking Email if existing or not
 	$qry = mysqli_query($con,$check_email);
 	$row = mysqli_num_rows($qry);
 	
 	if(empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($mobilenum) || empty($address))
 	{
 	echo "<script>alert('Please fill out all the fields')</script>";
-	echo "<script>window.open('index.php','_self')</script>";
+	echo "<script>window.open('index.php','_self')</script>"; //Return to the index page.
 	}
 
 	else if(!preg_match($name_validation, $firstname))
