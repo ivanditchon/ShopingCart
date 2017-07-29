@@ -17,7 +17,7 @@ if(isset($_SESSION["uid"]))
 		<script src="js/bootstrap.min.js"></script>
 		<script src="main.js"></script>
 		<script src="pwdcheck.js"></script>
-		<style>
+<style>
 			
 .icon-size
 {
@@ -83,7 +83,7 @@ if(isset($_SESSION["uid"]))
 	padding-right: 7px;
 }
 
-		</style>
+</style>
 	</head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
